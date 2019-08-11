@@ -27,7 +27,7 @@ module.exports = class OkCoolLetsGo {
     
     var routeParts = route.split('/').filter((rp) => rp != '')
     
-    if (routeParts === []) {
+    if (routeParts.length == 0) {
       this.root.value = action
     }
     else {
@@ -81,14 +81,17 @@ module.exports = class OkCoolLetsGo {
   find(url) {    
     let action = this.cache.get(url)
     if (action) {
-      return action
+      return {
+        action: action,
+        params: {}  
+      }
     }
     
     //url = urlParser.parse(url)
     var urlParts = url.split('/').filter((up) => up != '')
     var urlPartsLength = urlParts.length
     
-    if (urlParts === []) {
+    if (urlParts.length == 0) {
       return {
         action: this.root.value,
         params: {}  
