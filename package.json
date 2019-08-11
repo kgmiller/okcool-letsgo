@@ -1,0 +1,13 @@
+{
+  "name": "okcool-letsgo",
+  "version": "0.0.1",
+  "description": "A really fast URL router built on a radix tree.",
+  "main": "src/okcool-letsgo.js",
+  "scripts": {
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+  }
+}
